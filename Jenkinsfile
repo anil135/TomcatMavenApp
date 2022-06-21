@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy'){
 			steps {
 			    //Deploys the war file in tomcat container.
-				deploy adapters: [tomcat9(credentialsId: 'Manager', path: '', url: '172.26.93.249:8080/')], contextPath: null, war: '**/*war'
+				deploy adapters: [tomcat9(credentialsId: 'Manager', path: '', url: '172.26.93.249:8000/')], contextPath: null, war: '**/*war'
         }
 		}
 		stage('Show http status')
