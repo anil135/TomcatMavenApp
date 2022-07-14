@@ -30,7 +30,7 @@ jobs:
 
       - name: docker build
         run: | # Tag the image with the commit hash
-          docker build $DOCKERHUB_REPOSITORY .
+          docker build --tag $DOCKERHUB_REPOSITORY .
           docker tag $DOCKERHUB_REPOSITORY:latest $DOCKERHUB_REPOSITORY:$(git log -1 --pretty=%h)
 
       - name: docker push
