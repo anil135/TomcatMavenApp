@@ -3,10 +3,13 @@ name: Build and push Docker image upon release
 
 on:
   # Build and push Docker images *only* for releases.
-  release:
-    types: [published] # , created, edited
+  #release:
+    #types: [published] # , created, edited
+   push:
+    branches:
+      - main
     
-    workflow_dispatch:
+    #workflow_dispatch:
 
 jobs:
   push_to_registry:
