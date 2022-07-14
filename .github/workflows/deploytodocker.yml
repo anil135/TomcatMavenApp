@@ -5,6 +5,8 @@ on:
   # Build and push Docker images *only* for releases.
   release:
     types: [published] # , created, edited
+    
+    workflow_dispatch:
 
 jobs:
   push_to_registry:
